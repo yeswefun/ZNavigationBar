@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="s9">#ff6b5547</color>
+    <color name="s9_night">#ff5c6266</color>
+    <color name="default_text_night">#ff5c6266</color>
+
+    <color name="title_bar_bg_day">#ffdcd9cf</color>
+    <color name="title_bar_bg_day_dark">#e6e0c9</color>
+    <color name="title_bar_bg_night">#ff0a0b0d</color>
+    <color name="title_button_text">#ff9b4d00</color>
+    <color name="title_button_text_night">@color/default_text_night</color>
+    <color name="title_text">#ff483c31</color>
+    <color name="title_text_color">#ffffffff</color>
+    <color name="title_text_color_night">@color/default_text_night</color>
+    <color name="title_text_night">@color/default_text_night</color>
+    <color name="titlebar_badge_text">#ffffffff</color>
+    <color name="titlebar_badge_text_night">#ff181a1e</color>
+</resources>
