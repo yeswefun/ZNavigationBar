@@ -1,7 +1,6 @@
 package com.z.znavigation;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -13,13 +12,11 @@ import com.z.znavigation.navigation.DefaultNavigation;
 public class MainActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void initLayout() {
         setContentView(R.layout.activity_main);
-        initTitle();
     }
 
-    private void initTitle() {
+    protected void initTitle() {
         DefaultNavigation navigation = new DefaultNavigation
                 .DefaultBuilder(this, (ViewGroup) findViewById(R.id.view_group_main))
                 .setTitle("投稿")

@@ -1,7 +1,6 @@
 package com.z.znavigation.acitvity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -12,13 +11,11 @@ import com.z.znavigation.navigation.DefaultNavigation;
 public class TestAActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void initLayout() {
         setContentView(R.layout.activity_test_a);
-        initTitle();
     }
 
-    private void initTitle() {
+    protected void initTitle() {
         DefaultNavigation navigation = new DefaultNavigation
                 .DefaultBuilder(this, (ViewGroup) findViewById(R.id.view_group_a))
                 .setTitle("A页面")
