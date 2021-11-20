@@ -12,44 +12,83 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+
+    <!-- TextView占位测试 -->
+    <style name="test_placeholder">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">测试</item>
+        <item name="android:background">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--Activity进场。出场动画-->
+    <style name="AnimationActivity" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--用于设置打开新的Activity并进入新的Activity展示的动画-->
+        <item name="android:activityOpenEnterAnimation">@anim/activity_right_in</item>
+        <!--用于设置打开新的Activity并销毁之前的Activity展示的动画-->
+        <item name="android:activityOpenExitAnimation">@anim/activity_left_in</item>
+        <!--用于设置关闭当前Activity进入上一个Activity展示的动画-->
+        <item name="android:activityCloseEnterAnimation">@anim/activity_right_out</item>
+        <!--用于设置关闭当前Activity时展示的动画-->
+        <item name="android:activityCloseExitAnimation">@anim/activity_left_out</item>
+        <!--全屏显示-->
         <item name="android:windowFullscreen">true</item>
     </style>
 
-
+    <!-- 导航栏样式 -->
     <style name="title_bar_style">
         <item name="android:background">@color/title_bar_bg_day</item>
-        <item name="android:paddingLeft">0.0dip</item>
-        <item name="android:paddingRight">0.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">44.0dip</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
     </style>
 
     <style name="title_text_style">
-        <item name="android:textSize">18.0sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/s9</item>
     </style>
 
     <style name="title_bar_button">
-        <item name="android:textSize">16.0sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/s9</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@null</item>
-        <item name="android:paddingLeft">5.0dip</item>
-        <item name="android:paddingRight">5.0dip</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">fill_parent</item>
-        <item name="android:layout_marginLeft">0.0dip</item>
-        <item name="android:layout_marginRight">10.0dip</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginRight">10dp</item>
     </style>
 
     <style name="back_view" parent="@style/title_bar_button">
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/btn_back</item>
-        <item name="android:paddingLeft">0.0dip</item>
-        <item name="android:paddingRight">0.0dip</item>
-        <item name="android:layout_marginLeft">0.0dip</item>
-        <item name="android:layout_marginRight">0.0dip</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginRight">0dp</item>
         <item name="android:text">@null</item>
         <item name="android:drawableLeft">@null</item>
     </style>
+
+    <style name="back_view2" parent="@style/title_bar_button">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/s9</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@null</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+    </style>
+
 </resources>

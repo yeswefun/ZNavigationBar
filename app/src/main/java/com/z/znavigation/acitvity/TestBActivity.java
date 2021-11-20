@@ -1,7 +1,5 @@
 package com.z.znavigation.acitvity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +8,7 @@ import android.widget.Toast;
 import com.z.znavigation.R;
 import com.z.znavigation.navigation.DefaultNavigation;
 
-public class TestBActivity extends AppCompatActivity {
+public class TestBActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +19,7 @@ public class TestBActivity extends AppCompatActivity {
 
     private void initTitle() {
         DefaultNavigation navigation = new DefaultNavigation
-                .DefaultBuilder(this, (ViewGroup)findViewById(R.id.view_group_b))
+                .DefaultBuilder(this, (ViewGroup) findViewById(R.id.view_group_b))
                 .setTitle("B页面")
                 .setRightText("帮助")
                 .setRightTextOnClickListener(new View.OnClickListener() {
@@ -32,4 +30,5 @@ public class TestBActivity extends AppCompatActivity {
                 })
                 .create();
     }
+
 }

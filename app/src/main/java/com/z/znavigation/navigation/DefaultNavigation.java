@@ -28,8 +28,11 @@ public class DefaultNavigation extends AbsNavigation<DefaultNavigation.DefaultBu
 
         setOnClickListener(R.id.right_text, getParams().mRightTextOnClickListener);
 
-        if (!getParams().mDisableBackButton) {
-            setText(R.id.back_button, "返回");
+        if (getParams().mDisableBackButton) {
+
+        } else {
+            // 左边的一般是默认的, finish();
+             setText(R.id.back_button, "返回");
             setOnClickListener(R.id.back_button, new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -37,7 +40,6 @@ public class DefaultNavigation extends AbsNavigation<DefaultNavigation.DefaultBu
                 }
             });
         }
-        // 左边的一般是默认的, finish();
     }
 
     public static class DefaultBuilder extends AbsNavigation.AbsBuilder {
