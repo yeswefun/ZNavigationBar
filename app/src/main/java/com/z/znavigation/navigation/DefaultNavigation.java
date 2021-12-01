@@ -28,11 +28,11 @@ public class DefaultNavigation extends AbsNavigation<DefaultNavigation.DefaultBu
 
         setOnClickListener(R.id.right_text, getParams().mRightTextOnClickListener);
 
-        if (getParams().mDisableBackButton) {
+        if (getParams().mDisableBackButton) {// 默认是没有文字，所以默认view是看不到的
 
         } else {
             // 左边的一般是默认的, finish();
-             setText(R.id.back_button, "返回");
+            setText(R.id.back_button, "返回");
             setOnClickListener(R.id.back_button, new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -46,6 +46,10 @@ public class DefaultNavigation extends AbsNavigation<DefaultNavigation.DefaultBu
 
         DefaultNavigationParams P;
 
+        public DefaultBuilder(Context context) {
+            this(context, null);
+        }
+
         public DefaultBuilder(Context context, ViewGroup parent) {
             super(context, parent);
             P = new DefaultNavigationParams(context, parent);
@@ -56,7 +60,6 @@ public class DefaultNavigation extends AbsNavigation<DefaultNavigation.DefaultBu
          */
         @Override
         public DefaultNavigation create() {
-//            DefaultNavigation navigation = new DefaultNavigation(P);
             return new DefaultNavigation(P);
         }
 

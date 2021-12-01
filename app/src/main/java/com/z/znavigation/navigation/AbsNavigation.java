@@ -1,7 +1,9 @@
 package com.z.znavigation.navigation;
 
+import android.app.Activity;
 import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,9 +27,16 @@ public abstract class AbsNavigation<T extends AbsNavigation.AbsBuilder.AbsNaviga
     }
 
     /*
-        false
      */
     private void createAndBindView() {
+
+        if (mParams.mParent == null) {
+            // 获取activity的根布局, setContentView源码
+            ViewGroup activityRoot =  ((Activity)mParams.mContext).findViewById(android.R.id.content);
+            mParams.mParent = (ViewGroup) activityRoot.getChildAt(0);
+            Log.e("TAG", "mParent: " + mParams.mParent);
+        }
+
         // 加载顶部导航的布局
         mNavigationView = LayoutInflater.from(mParams.mContext)
                 .inflate(getLayoutResId(), mParams.mParent, false);
@@ -41,7 +50,7 @@ public abstract class AbsNavigation<T extends AbsNavigation.AbsBuilder.AbsNaviga
         public AbsBuilder(Context context, ViewGroup parent) {
         }
 
-        //        public abstract <P extends AbsNavigation> P create();
+        //public abstract <P extends AbsNavigation> P create();
         public abstract AbsNavigation create();
 
         public static class AbsNavigationParams {
